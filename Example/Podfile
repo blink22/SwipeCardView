@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwipeCardView_Example' do
+  pod 'SwipeCardView', :path => '../'
+
+  target 'SwipeCardView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
