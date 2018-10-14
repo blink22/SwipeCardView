@@ -1,0 +1,23 @@
+{
+  "name": "SwipeCardView",
+  "version": "0.1.0",
+  "summary": "A subclass of UIView that provides cards that can be swiped.",
+  "description": "A Cocoapod that provdies cards that can be swiped in given directions and afford changing number of visible cards given any view.",
+  "homepage": "https://github.com/OEissa/SwipeCardView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "OEissa": "omar.eissa@blink22.com"
+  },
+  "source": {
+    "git": "https://github.com/OEissa/SwipeCardView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_version": "4.0",
+  "source_files": "SwipeCardView/Classes/**/*"
+}

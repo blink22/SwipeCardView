@@ -1,0 +1,16 @@
+PODS:
+  - SwipeCardView (0.1.0)
+
+DEPENDENCIES:
+  - SwipeCardView (from `../`)
+
+EXTERNAL SOURCES:
+  SwipeCardView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  SwipeCardView: 21c0f0a0874887128a72c9104637d3e1d9abab1d
+
+PODFILE CHECKSUM: 4156cb3591c46f31fcf9bceec123e560e861d642
+
+COCOAPODS: 1.4.0

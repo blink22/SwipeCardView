@@ -1,24 +1,52 @@
 //
 //  ViewController.swift
-//  SwipeCardView
+//  SwipeCards
 //
-//  Created by OEissa on 10/14/2018.
-//  Copyright (c) 2018 OEissa. All rights reserved.
+//  Created by Omar Eissa on 10/9/18.
+//  Copyright © 2018 Omar Eissa. All rights reserved.
 //
 
 import UIKit
+import SwipeCardView
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+class ViewController: UIViewController, SwipeCardViewDataSource, SwipeCardViewDelegate {
+    
+    @IBOutlet weak var swipeCardView: SwipeCardView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        swipeCardView.dataSource = self
+        swipeCardView.delegate = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // MARK: - SwipeCardViewDataSource
+    func numberOfCards(_ swipeCardView: SwipeCardView) -> Int {
+        return 10000
     }
-
+    
+    func swipeCardView(_ swipeCardView: SwipeCardView, viewForIndex index: Int) -> UIView {
+        switch index % 5 {
+        case 0:
+            return UIImageView(image: UIImage(named: "J♠️"))
+        case 1:
+            return UIImageView(image: UIImage(named: "J♥️"))
+        case 2:
+            return UIImageView(image: UIImage(named: "J♣️"))
+        case 3:
+            return UIImageView(image: UIImage(named: "J♦️"))
+        case 4:
+            return UIImageView(image: UIImage(named: "K♥️"))
+        default:
+            return UIImageView(image: UIImage(named: "J♠️"))
+        }
+    }
+    
+    // MARK: - SwipeCardViewDataSource
+    func swipeCardView(_ swipeCardView: SwipeCardView, cardWasSwipedIn direction: CardMoveDirection, at index: Int) {
+        print("\(direction)  \(index)")
+    }
+    
+    @IBAction func revert(_ sender: UIButton) {
+        swipeCardView.revertIfPossible()
+    }
 }
 

@@ -1,0 +1,6 @@
+framework module SwipeCardView {
+  umbrella header "SwipeCardView-umbrella.h"
+
+  export *
+  module * { export * }
+}
